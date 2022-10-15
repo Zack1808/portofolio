@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Importing the style file 
@@ -26,9 +26,14 @@ const URLS = [
 
 // Creating the App component
 const App = () => {
+
+    const [darkMode, setDarkMode] = useState(true);
+
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <Navbar urls={URLS} />
+            <div className={`container ${darkMode && "dark"}`}>
+                <Navbar urls={URLS} switchToggle={darkMode} setSwitchToggle={setDarkMode}/>
+            </div>
         </BrowserRouter>
     )
 }

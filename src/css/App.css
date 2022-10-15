@@ -11,9 +11,15 @@
 
 }
 
-body {
+.container {
     height: 100vh;
     overflow-y: scroll;
     overflow-x: none;
     background-color: #f1f0f0;
+    transition: background-color .7s;
+}
+
+.container.dark {
+    background-color: rgb(32, 32, 32);
+    transition: background-color .7s;
 }

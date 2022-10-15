@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 
 // Importing the style file
@@ -12,9 +12,7 @@ const spring = {
 }
 
 // Creating the SwitchButton component
-const SwitchButton = () => {
-
-    const [toggle, setToggle] = useState(false);
+const SwitchButton = ({ toggle, setToggle}) => {
 
     return (
         <div className='switch' data-toggle={toggle} onClick={() => setToggle(!toggle)}>

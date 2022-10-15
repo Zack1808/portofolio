@@ -9,7 +9,7 @@ import SwitchButton from './SwitchButton';
 import '../css/Navbar.css';
 
 // Creating the Navbar component
-const Navbar = ({ urls }) => {
+const Navbar = ({ urls, switchToggle, setSwitchToggle }) => {
 
     const [toggle, setToggle] = useState(false)
     let n = .1;
@@ -18,7 +18,7 @@ const Navbar = ({ urls }) => {
         <nav className='navbar'>
             <Link to="/"  className="logo" onClick={() => setToggle(false)}><h2>Logo</h2></Link>
             <div className="navbar-container">
-                <SwitchButton />
+                <SwitchButton toggle={switchToggle} setToggle={setSwitchToggle} />
                 <div className="navbar-hamburger">
                     <Hamburger color="white" toggle={setToggle} toggled={toggle} duration={.5} easing="ease-in-out" rounded/>
                 </div>
