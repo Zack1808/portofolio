@@ -59,7 +59,7 @@
         transform: scale(1, 0);
         transform-origin: top;
         background-color: rgba(22, 22, 22, .95);
-        transition: all .7s ease-in-out;
+        transition: all .35s ease-in-out;
     }
 
     .navbar-link-list-active{
