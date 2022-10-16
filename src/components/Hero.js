@@ -11,11 +11,11 @@ const options = {
     loop: true
 }
 
-const Hero = () => {
+const Hero = ({ buttonClick}) => {
     return (
         <div className='hero-container'>
             <h1><Typewriter options={options} /></h1>
-            <button className='hero-btn btn'>See More!</button>
+            <button className='hero-btn btn' onClick={buttonClick}>See More!</button>
         </div>
     )
 }

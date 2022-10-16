@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 
 // Importing the style file
 import '../css/HomePage.css'
@@ -12,11 +12,21 @@ import person from '../img/placeholder.png'
 
 // Creating the HomePage component
 const HomePage = () => {
+
+    const ref = useRef();
+
+    // Function that will scroll to the segment list
+    const scroll = () => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' })
+    }
+
     return (
         <div className='homepage-container'>
-            <Hero />
-            <Segment image={person}/>
-            <Segment image={person} flipped/>
+            <Hero buttonClick={scroll} />
+            <div className='segment-list-container' ref={ref}>
+                <Segment image={person}/>
+                <Segment image={person} flipped/>
+            </div>
         </div>
     )
 }
