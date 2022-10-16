@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     height: 75px;
-    background-color: #0b0b0c;
+    background-color: var(--navbar-background);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,7 +77,7 @@
         border-width: 0;
     }
 
-    .navbar-link-list-active .navbar-link:nth-child(n+1) {
+    .navbar-link-list-active .navbar-link {
         opacity: 1;
     }
 

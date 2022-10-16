@@ -40,7 +40,7 @@
 }
 
 .text-container {
-    background-color: #53655C; 
+    background-color: var(--green-background); 
     padding: 40px 20px;
     color: #fff;
     display: flex;
@@ -68,8 +68,8 @@ p {
     text-decoration: none;
     border-radius: 10px;
     font-weight: 900;
-    background-color: #EFEFEF;
-    transition: transform .2s ease-in-out, background-color .7s, color .7s;
+    background-color: var(--light-background);
+    transition: transform .5s ease-in-out, background-color .7s, color .7s;
 }
 
 .btn:hover {
@@ -78,13 +78,13 @@ p {
 
 /* Dark mode styling */
 .dark .text-container {
-    background-color: rgb(44, 44, 44);
+    background-color: var(--dark-green-background);
     transition: background-color .7s;
 }
 
 .dark .btn {
     background-color: rgba(239, 239, 239, .2);
-    color: #EFEFEF;
+    color: var(--light-background);
     transition: background-color .7s, color .7s;
 }
 
@@ -102,7 +102,7 @@ p {
     }
 
     .image {
-        border: 3px solid #53655C;
+        border: 3px solid var(--green-background);
         height: 200px;
         width: 200px;
         aspect-ratio: 1 / 1;
@@ -110,7 +110,7 @@ p {
         background-position: top;
         background-position-x: 20%;
         background-size: 140% 200%;
-        background-color: #d1d1d1
+        background-color: var(--green-background)
     }
 
     .segment-text-container {
@@ -118,8 +118,7 @@ p {
     }
 
     .dark .image {
-        border-color:rgb(44, 44, 44);
+        border-color:var(--dark-green-background);
         background-color:rgb(38, 38, 38)
-
     }
 }

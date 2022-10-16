@@ -2,26 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap');
 
+
+:root {
+    --light-background: #EFEFEF;
+    --dark-background: #1F1F1F;
+    --navbar-background: #0b0b0c;
+    --green-background: #53655C;
+    --dark-green-background: #2c2c2c;
+}
+
 /* Removing all default spacings from the page */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 .container {
     height: 100vh;
     overflow-y: auto;
     overflow-x: none;
-    background-color: #EFEFEF;
+    background-color: var(--light-background);
     transition: background-color .7s;
 }
 
 /* Styling the App container for dark mode */
 .container.dark {
-    background-color: #1F1F1F;
+    background-color: var(--dark-background);
     transition: background-color .7s;
 }
 
