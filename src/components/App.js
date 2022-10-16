@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Importing the style file 
@@ -22,10 +22,6 @@ const URLS = [
     {
         link: '/projects',
         title: 'Project List'
-    }, 
-    {
-        link: '/contact',
-        title: "Contact Me"
     }
 ]
 
@@ -49,15 +45,21 @@ const SOCIAL = [
 const App = () => {
 
     const [darkMode, setDarkMode] = useState(true);
+    const ref = useRef()
+
+    // function that will scroll to the contact from
+    const scrollToContact = () => {
+        ref.current?.scrollIntoView({ behavior: "smooth"})
+    }
 
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className={`container ${darkMode && "dark"}`}>
-                <Navbar urls={URLS} switchToggle={darkMode} setSwitchToggle={setDarkMode} logo="PortoPage"/>
+                <Navbar urls={URLS} switchToggle={darkMode} setSwitchToggle={setDarkMode} logo="PortoPage" scrollTo={scrollToContact}/>
                 <Routes>
-                    <Route exact path="/" element={<HomePage dark={darkMode} />}/>
+                    <Route exact path="/" element={<HomePage dark={darkMode} ref={ref} />}/>
                 </Routes>
-                <Footer urls={URLS} social={SOCIAL} />
+                <Footer urls={URLS} social={SOCIAL} scrollTo={scrollToContact} />
             </div>
         </BrowserRouter>
     )

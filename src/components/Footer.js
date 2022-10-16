@@ -5,7 +5,7 @@ import { UilInstagramAlt, UilFacebook, UilGithub, UilEnvelopeOpen, UilPhone, Uil
 // Importing the style file
 import '../css/Footer.css';
 
-const Footer = ({ urls, social }) => {
+const Footer = ({ urls, social, scrollTo }) => {
 
     // Function that will return the icon and the the text
     const renderLink = (title) => {
@@ -36,6 +36,7 @@ const Footer = ({ urls, social }) => {
                     {urls.map(url => {
                         return <Link to={url.link} key={url.title}>{url.title}</Link>
                     })}
+                    <Link to="/" onClick={scrollTo}>Contact Me</Link>
                 </div>
                 <div className="social-media">
                     {social.map(soc => {

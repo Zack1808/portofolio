@@ -1,0 +1,120 @@
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 20px;
+    transition: color .5s;
+}
+
+form {
+    width: 900px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding: 20px 0 0;
+    opacity: 0;
+    transform: scale(.85);
+    transition: opacity .3s ease-in-out, transform .4s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .3s ease-in-out, transform .4s ease-in-out;
+}
+
+.form-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .8em
+}
+
+.input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: .3em;
+    background-color: #d6d6d6;
+    padding: 10px;
+    border-bottom: 2px solid var(--dark-background);
+    transition: all .7s;
+}
+
+.input:last-child {
+    margin-bottom: 20px;
+}
+
+.input input {
+    border: none;
+    background-color: #d6d6d6;
+    width: 100%;
+    padding: 10px;
+    transition: all .7s
+}
+
+label {
+    font-weight: 600;
+}
+
+.input textarea {
+    width: 100%;
+    height: 200px;
+    background-color:#d6d6d6 ;
+    border: none;
+    padding: 10px;
+    resize: none;
+    transition: all .7s
+}
+
+.input input:focus, .input textarea:focus {
+    outline: none;
+}
+
+.btn-submit {
+    background: var(--green-background);
+    color: #fff;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark .contact-form {
+    color: #fff;
+    transition: color .5s;
+}
+
+.dark .input {
+    border-color: #fff
+}
+
+.dark .input, .dark .input input, .dark .input textarea {
+    background-color: var(--dark-green-background);
+    color: var(--light-background);
+    transition: all .7s
+}
+
+.dark ::placeholder {
+    color: var(--light-background);
+    transition: all .7s;
+}
+
+@media (max-width: 760px) {
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}
