@@ -3,8 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Importing the style file 
 import '../css/App.css'
-import Navbar from './Navbar';
 
+// Importing the costume made components
+import Navbar from './Navbar';
+import HomePage from './HomePage';
+
+// Link rotues
 const URLS = [
     {
         link: '/',
@@ -32,7 +36,10 @@ const App = () => {
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className={`container ${darkMode && "dark"}`}>
-                <Navbar urls={URLS} switchToggle={darkMode} setSwitchToggle={setDarkMode}/>
+                <Navbar urls={URLS} switchToggle={darkMode} setSwitchToggle={setDarkMode} logo="PortoPage"/>
+                <Routes>
+                    <Route exact path="/" element={<HomePage dark={darkMode} />}/>
+                </Routes>
             </div>
         </BrowserRouter>
     )

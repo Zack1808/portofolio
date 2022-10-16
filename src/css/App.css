@@ -15,15 +15,18 @@
     height: 100vh;
     overflow-y: auto;
     overflow-x: none;
-    background-color: #f1f0f0;
+    background-color: #EFEFEF;
     transition: background-color .7s;
 }
 
+/* Styling the App container for dark mode */
 .container.dark {
-    background-color: rgb(32, 32, 32);
+    background-color: #1F1F1F;
     transition: background-color .7s;
 }
 
+
+/* Styling the scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
   }
@@ -35,13 +38,13 @@
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(32, 32, 32); 
+    background-color: rgb(32, 32, 32); 
     box-shadow: inset 2px 0 12px rgb(172, 172, 172);
     border-radius: 10px;
 }
 
 .dark::-webkit-scrollbar-thumb {
-    background: #f1f1f1f1; 
+    background-color: #f1f1f1f1; 
     box-shadow: inset 2px 0 12px rgb(72, 72, 72);
     border-radius: 10px;
 }
