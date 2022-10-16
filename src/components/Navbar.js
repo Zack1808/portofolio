@@ -9,14 +9,14 @@ import SwitchButton from './SwitchButton';
 import '../css/Navbar.css';
 
 // Creating the Navbar component
-const Navbar = ({ urls, switchToggle, setSwitchToggle }) => {
+const Navbar = ({ urls, switchToggle, setSwitchToggle, logo = "Logo" }) => {
 
     const [toggle, setToggle] = useState(false)
     let n = .1;
 
     return (
         <nav className='navbar'>
-            <Link to="/"  className="logo" onClick={() => setToggle(false)}><h2>Logo</h2></Link>
+            <Link to="/"  className="logo" onClick={() => setToggle(false)}><h2>{logo}</h2></Link>
             <div className="navbar-container">
                 <SwitchButton toggle={switchToggle} setToggle={setSwitchToggle} />
                 <div className="navbar-hamburger">

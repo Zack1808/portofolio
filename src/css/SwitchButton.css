@@ -18,13 +18,5 @@
 .handle {
     width: 20px;
     height: 20px;
-    background-color: #fff;
     border-radius: 50%;
-    transition: box-shadow .3s, background-color .3s
-}
-
-.switch[data-toggle="true"] .handle {
-    background-color: rgb(60, 60, 52);
-    box-shadow: inset 7px 2px 0 0px #f9f7c6;
-    transition: box-shadow .3s, background-color .3s;
 }
