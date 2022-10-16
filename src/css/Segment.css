@@ -68,6 +68,7 @@ p {
     text-decoration: none;
     border-radius: 10px;
     font-weight: 900;
+    color: var(--dark-green-background);
     background-color: var(--light-background);
     transition: transform .5s ease-in-out, background-color .7s, color .7s;
 }

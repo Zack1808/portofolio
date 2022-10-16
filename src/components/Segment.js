@@ -1,10 +1,11 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-router-dom'
 
 // Importing the style file
 import '../css/Segment.css'
 
-const Segment = ({ image, flipped }) => {
+const Segment = ({ image, flipped, title = "Title", text, buttonText = "Button", link = "/"}) => {
 
     const [ref, inView] = useInView({
         threshold: 0.1
@@ -17,9 +18,9 @@ const Segment = ({ image, flipped }) => {
             </div>
             <div className="segment-text-container">
                 <div className="text-container">
-                    <h1>Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iusto quia nisi eveniet ex, magnam ab ducimus labore explicabo, vel esse, fugiat animi hic dolore.</p>
-                    <button className="btn">Button</button>
+                    <h1>{title}</h1>
+                    <p>{text || "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, explicabo, alias voluptates cupiditate, tenetur commodi inventore veritatis eaque beatae totam dolorum laudantium perferendis corrupti possimus dolore tempore dicta cumque mollitia?"} </p>
+                    <Link to={link} className="btn">{buttonText}</Link>
                 </div>
             </div>
         </div>
