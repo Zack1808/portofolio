@@ -1,7 +1,8 @@
 .segment-container, .segment-container-flipped{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 0;
     transform: scale(.85);
@@ -22,15 +23,32 @@
 .img-container{
     width: 30%;
     height: 400px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.segment-container-flipped .img-container {
+    justify-content: flex-start;
 }
 
 .image  {
     height: 100%;
-    width: 100%;
-    background-size: 70% 100%;
+    width: 400px;
+    border-radius: 50%;
+    border: 3px solid var(--green-background);
+    background-size:  100%;
     background-repeat: no-repeat;
+    background-position: top;
+    background-position-x: 20%;
+    background-color: var(--green-background)
+}
+
+.segment-container-flipped .image  {
+    background-size: cover;
     background-position: center;
 }
+
+
 
 .segment-text-container {
     width: 50%;
@@ -78,6 +96,12 @@ p {
 }
 
 /* Dark mode styling */
+
+.dark .image {
+    border-color:var(--dark-green-background);
+    background-color:rgb(38, 38, 38)
+}
+
 .dark .text-container {
     background-color: var(--dark-green-background);
     transition: background-color .7s;
@@ -89,12 +113,14 @@ p {
     transition: background-color .7s, color .7s;
 }
 
+
 @media (max-width: 760px) {
     .segment-container, .segment-container-flipped {
+        width: 100%;
         flex-direction: column;
     }
 
-    .img-container {
+    .img-container, .segment-container-flipped .img-container{
         width: 100%;
         height: 200px;
         display: flex;
@@ -107,19 +133,10 @@ p {
         height: 200px;
         width: 200px;
         aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        background-position: top;
-        background-position-x: 20%;
         background-size: 140% 200%;
-        background-color: var(--green-background)
     }
 
     .segment-text-container {
         width: 90%;
-    }
-
-    .dark .image {
-        border-color:var(--dark-green-background);
-        background-color:rgb(38, 38, 38)
     }
 }

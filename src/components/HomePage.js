@@ -10,6 +10,7 @@ import Contact from './Contact'
 
 // Importing the Images
 import person from '../img/placeholder.png'
+import code  from '../img/code.png'
 
 // Segment text
 const ABOUT = "Hi! My name is Jean-Pierre and I am a 22 year-old self-taught web developer. I've started my development journey in 2018, where I fist encountered HTML and CSS. At first it was boring, but then JavaScript came in and things changed."
@@ -30,7 +31,7 @@ const HomePage = React.forwardRef(( props, ref) => {
             <Hero buttonClick={scrollToSegments} />
             <div className='segment-list-container' ref={segmentRef}>
                 <Segment image={person} title="About Me" text={ABOUT} buttonText="Read More!" link="/about" />
-                <Segment image={person} flipped title="My Projects" text={PROJECTS} buttonText="Check out the list!" link="/projects"/>
+                <Segment image={code} flipped title="My Projects" text={PROJECTS} buttonText="Check out the list!" link="/projects"/>
             </div>
             <div className='contact-form' ref={ref}>
                 <Contact />
