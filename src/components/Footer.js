@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { UilInstagramAlt, UilFacebook, UilGithub, UilEnvelopeOpen, UilPhone, UilCopyright} from '@iconscout/react-unicons'
+import { UilInstagramAlt, UilFacebook, UilGithub, UilEnvelopeOpen, UilPhone, UilCopyright, UilLinkedin} from '@iconscout/react-unicons'
 
 // Importing the style file
 import '../css/Footer.css';
@@ -21,9 +21,15 @@ const Footer = ({ urls, social, scrollTo }) => {
                 <p>{title}</p>
             </div>
         )
-        return (
+        if(title==="Facebook") return (
             <div className="icon">
                 <UilFacebook />
+                <p>{title}</p>
+            </div>
+        )
+        return (
+            <div className="icon">
+                <UilLinkedin />
                 <p>{title}</p>
             </div>
         )

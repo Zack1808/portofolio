@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useEffect} from 'react'
 
 // Importing the style file
 import '../css/HomePage.css'
@@ -20,6 +20,12 @@ const PROJECTS = "In a short period of time, I've managed to create a collection
 const HomePage = React.forwardRef(( props, ref) => {
 
     const segmentRef = useRef();
+    const top = useRef()
+
+    // Putting the user to the top of the page
+    useEffect(() => {
+        top.current?.scrollIntoView({ top: 0});
+    }, [])
 
     // Function that will scroll to the segment list
     const scrollToSegments = () => {
@@ -27,7 +33,7 @@ const HomePage = React.forwardRef(( props, ref) => {
     }
 
     return (
-        <div className='homepage-container'>
+        <div className='homepage-container' ref={top}>
             <Hero buttonClick={scrollToSegments} buttonText="See more" />
             <div className='segment-list-container' ref={segmentRef}>
                 <Segment image={person} title="About Me" text={ABOUT} buttonText="Read More!" link="/about" />

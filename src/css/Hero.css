@@ -28,6 +28,7 @@
     height: 100%;
     border-radius: 0;
     background-size: 100%;
+    background-position: top center;
     background-color: transparent;
 }
 

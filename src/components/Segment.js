@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 // Importing the style file
 import '../css/Segment.css'
 
-const Segment = ({ image, flipped, title = "Title", text, buttonText = "Button", link = "/"}) => {
+const Segment = ({ image, flipped, title = "Title", text, buttonText, link = "/"}) => {
 
     const [ref, inView] = useInView({
         threshold: 0.1
@@ -20,7 +20,7 @@ const Segment = ({ image, flipped, title = "Title", text, buttonText = "Button",
                 <div className="text-container">
                     <h1>{title}</h1>
                     <p>{text || "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, explicabo, alias voluptates cupiditate, tenetur commodi inventore veritatis eaque beatae totam dolorum laudantium perferendis corrupti possimus dolore tempore dicta cumque mollitia?"} </p>
-                    <Link to={link} className="btn">{buttonText}</Link>
+                    {buttonText && <Link to={link} className="btn">{buttonText}</Link>}
                 </div>
             </div>
         </div>

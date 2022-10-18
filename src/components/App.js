@@ -39,6 +39,10 @@ const SOCIAL = [
     {
         link: "https://web.facebook.com/jeanpierre.novak.391",
         title: "Facebook"
+    },
+    {
+        link: "https://www.linkedin.com/in/jean-pierre-novak-2425a7218/",
+        title: "LinkedIn"
     }
 ]
 

@@ -36,10 +36,9 @@
     width: 400px;
     border-radius: 50%;
     border: 3px solid var(--green-background);
-    background-size:  100%;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: top;
-    background-position-x: 20%;
+    background-position: center;
     background-color: var(--green-background)
 }
 
@@ -133,7 +132,6 @@ p {
         height: 200px;
         width: 200px;
         aspect-ratio: 1 / 1;
-        background-size: 140% 200%;
     }
 
     .segment-text-container {
