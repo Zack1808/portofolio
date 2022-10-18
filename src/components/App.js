@@ -7,6 +7,7 @@ import '../css/App.css'
 // Importing the costume made components
 import Navbar from './Navbar';
 import HomePage from './HomePage';
+import AboutMe from './AboutMe'
 import Footer from './Footer'
 
 // Link rotues
@@ -57,7 +58,8 @@ const App = () => {
             <div className={`container ${darkMode && "dark"}`}>
                 <Navbar urls={URLS} switchToggle={darkMode} setSwitchToggle={setDarkMode} logo="PortoPage" scrollTo={scrollToContact}/>
                 <Routes>
-                    <Route exact path="/" element={<HomePage dark={darkMode} ref={ref} />}/>
+                    <Route exact path="/" element={<HomePage ref={ref} />}/>
+                    <Route exact path="/about" element={<AboutMe  />}/>
                 </Routes>
                 <Footer urls={URLS} social={SOCIAL} scrollTo={scrollToContact} />
             </div>

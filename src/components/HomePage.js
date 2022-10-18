@@ -28,13 +28,13 @@ const HomePage = React.forwardRef(( props, ref) => {
 
     return (
         <div className='homepage-container'>
-            <Hero buttonClick={scrollToSegments} />
+            <Hero buttonClick={scrollToSegments} buttonText="See more" />
             <div className='segment-list-container' ref={segmentRef}>
                 <Segment image={person} title="About Me" text={ABOUT} buttonText="Read More!" link="/about" />
                 <Segment image={code} flipped title="My Projects" text={PROJECTS} buttonText="Check out the list!" link="/projects"/>
             </div>
             <div className='contact-form' ref={ref}>
-                <Contact />
+                <Contact name="contact"/>
             </div>
         </div>
     )

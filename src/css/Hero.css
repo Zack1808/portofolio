@@ -1,6 +1,6 @@
 .hero-container {
     height: calc(100vh - 75px);
-    width: 99.4vw;
+    width: 100%;
     background-color: var(--green-background);
     color: #fff;
     display: flex;
@@ -11,9 +11,51 @@
     transition: background-color .7s;
 }
 
+.image-full {
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat ;
+}
+
+.image-half {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.image-half .image {
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    background-size: 100%;
+    background-color: transparent;
+}
+
+.image-half .image-half-content{
+    width: 50%;
+    height: 100%;
+    background-color: var(--light-background);
+    display: flex;
+    padding: 0 50px;
+    gap: 2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .7s;
+}
+
+.image-half-content h1, .image-half-content p {
+    color: var(--dark-background);
+    transition: color .7s;
+}
+
+.image-half .image-half-content h1 {
+    padding: 0
+}
+
 .hero-container h1 {
     letter-spacing: normal;
-    /* font-family: "Poppins", sans-serif; */
+    font-family: "Poppins", sans-serif;
     font-size: calc(3em + 1vw);
     padding: 50px 0
 }
@@ -37,9 +79,43 @@
     transition: background-color .7s;
 }
 
+.dark .image-half .image-half-content {
+    background-color: transparent;
+    transition: background-color .7s;
+}
+
+.dark .image-half .image {
+    transition: background-color .7s;
+}
+
+.dark .image-half-content h1, .dark .image-half-content p {
+    color: var(--light-background);
+    transition: color .7s;
+}
+
 @media (max-width: 760px) {
     .hero-container {
         width: 100vw;
+    }
+
+    .image-half {
+        flex-direction: column;
+        justify-self: space-around;
+        padding: 0;
+    }
+
+    .image-half .image, .image-half .image-half-content {
+        width: 100%;
+    }
+
+    .image-half .image-half-content h1{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .image-full {
+        background-size: auto 100% 
     }
 
     .hero-container h1 {
