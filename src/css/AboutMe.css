@@ -1,3 +1,25 @@
 .about-me-container {
     padding-top: 75px;
 }
+
+.segment-list-container .edu {
+    font-size: calc(3em + 1vw);
+    padding: 20px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(.85);
+    transition: opacity .3s ease-in-out, transform .4s ease-in-out, color .7s;
+}
+
+.segment-list-container .visible {
+    transform: scale(1);
+    opacity: 1;
+    transition: opacity .3s ease-in-out, transform .4s ease-in-out !important;
+}
+
+.dark .segment-list-container .edu {
+    color: #fff;
+    transition: color .7s;
+}
