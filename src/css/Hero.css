@@ -94,25 +94,9 @@
     transition: color .7s;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 760px){
     .hero-container {
         width: 100vw;
-    }
-
-    .image-half {
-        flex-direction: column;
-        justify-self: space-around;
-        padding: 0;
-    }
-
-    .image-half .image, .image-half .image-half-content {
-        width: 100%;
-    }
-
-    .image-half .image-half-content h1{
-        display: flex;
-        width: 100%;
-        align-items: flex-start;
     }
 
     .image-full {
@@ -129,5 +113,29 @@
     
     .hero-btn.btn:hover {
         transform: scale(1.4);
+    }
+}
+
+@media (orientation: portrait) and (max-width: 760px) {
+    .image-half {
+        flex-direction: column;
+        justify-self: space-around;
+        padding: 0;
+    }
+
+    .image-half .image, .image-half .image-half-content {
+        width: 100%;
+    }
+
+    .image-half .image-half-content h1{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 1400px) {
+    .image-half .image-half-content h1{
+        font-size: calc(1.2em + 1vw);
     }
 }

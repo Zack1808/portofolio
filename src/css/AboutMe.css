@@ -1,10 +1,14 @@
 .about-me-container {
     padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.segment-list-container .edu {
+.segment-list-container .edu, .exp {
     font-size: calc(3em + 1vw);
-    padding: 20px 0;
+    padding: 50px 0;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -13,13 +17,29 @@
     transition: opacity .3s ease-in-out, transform .4s ease-in-out, color .7s;
 }
 
-.segment-list-container .visible {
+.segment-list-container .visible, .visible {
     transform: scale(1);
     opacity: 1;
     transition: opacity .3s ease-in-out, transform .4s ease-in-out !important;
 }
 
-.dark .segment-list-container .edu {
+.dark .segment-list-container .edu, .dark .exp {
     color: #fff;
     transition: color .7s;
+}
+
+.progress-list-container {
+    width: 81%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8em;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+    .segment-list-container .edu, .exp {
+        font-size: calc(2em + 1vw);
+    }
 }

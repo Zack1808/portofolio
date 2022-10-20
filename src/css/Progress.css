@@ -1,0 +1,57 @@
+.progress-container {
+    width: 45%;
+    opacity: 0;
+    transform: scale(.85);
+    transition: opacity .3s ease-in-out, transform .4s ease-in-out;;
+    
+}
+
+.cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--green-background);
+    padding: 20px;
+    border-radius: 20px;
+    transition: background-color .7s;
+}
+
+.progress-text {
+    color: #fff
+}
+
+.circular {
+    margin: 20px 0;
+    max-width: 100%;
+    max-height: 250px;
+}
+
+.circle-bg, .circle {
+    fill: transparent;
+}
+
+.percentage {
+    font-size: 1.3em;
+    text-anchor: middle;
+    fill: #fff;
+    font-weight: 700;
+}
+
+.dark .cont {
+    background-color: var(--dark-green-background);
+    transition: background-color .7s;
+}
+
+@media (max-width: 760px) {
+
+    .cont {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) or (orientation: portrait){
+    .progress-container {
+        width: 100%;
+    }
+}

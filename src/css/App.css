@@ -22,7 +22,7 @@
 .container {
     height: 100vh;
     overflow-y: auto;
-    overflow-x: none;
+    overflow-x: hidden;
     background-color: var(--light-background);
     transition: background-color .7s;
 }
