@@ -18,7 +18,10 @@
 }
 
 .progress-text {
-    color: #fff
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
 }
 
 .circular {
@@ -29,6 +32,7 @@
 
 .circle-bg, .circle {
     fill: transparent;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .3))
 }
 
 .percentage {
@@ -44,14 +48,24 @@
 }
 
 @media (max-width: 760px) {
-
     .cont {
         flex-direction: column;
         width: 100%;
     }
+
+    .progress-text {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-@media (max-width: 900px) or (orientation: portrait){
+@media (max-width: 1400px) or (orientation: portrait){
+
+    .cont {
+        width: 100%;
+    }
+
     .progress-container {
         width: 100%;
     }

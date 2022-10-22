@@ -56,12 +56,12 @@ const AboutMe = () => {
             </div>
             <h1 className={`exp ${expInView && "visible"}`} ref={expRef}>Experience</h1>
             <div className="progress-list-container">
-                <Progress progress={90} text="HTML" />
-                <Progress progress={85} text="CSS" />
-                <Progress progress={65} text="JavaScript" />
-                <Progress progress={60} text="React" />
-                <Progress progress={40} text="PHP" />
-                <Progress progress={35} text="Python" />
+                <Progress progress={90} text="HTML" subtitle="Experienced" />
+                <Progress progress={85} text="CSS" subtitle="Experienced" />
+                <Progress progress={65} text="JavaScript" subtitle="Experienced" />
+                <Progress progress={60} text="React" subtitle="Experienced" />
+                <Progress progress={40} text="PHP" subtitle="Intermediate" />
+                <Progress progress={35} text="Python" subtitle="Intermediate" />
             </div>
         </div>
     )

@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import '../css/Progress.css'
 
 // Creating the Progress conponent
-const Progress = ({ progress, text } ) => {
+const Progress = ({ progress, text, subtitle } ) => {
 
     const [offset, setOffset] = useState(0);
     const circleRef = useRef(null);
@@ -37,7 +37,10 @@ const Progress = ({ progress, text } ) => {
     return (
         <div className={`progress-container ${inView && "visible"}`} ref={ref}>
             <div className="cont">
-                <div className="progress-text"><h1>{text}</h1></div>
+                <div className="progress-text">
+                    <h1>{text}</h1>
+                    {subtitle && <h4>{subtitle}</h4>}
+                </div>
                 <div className="progress-circle">
                     <svg width={size} height={size} className='circular'>
                         <circle className='circle-bg' stroke={circleOneStroke} cx={center} cy={center} r={radius} strokeWidth={strokeWidth} />
