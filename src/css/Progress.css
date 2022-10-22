@@ -2,7 +2,7 @@
     width: 45%;
     opacity: 0;
     transform: scale(.85);
-    transition: opacity .3s ease-in-out, transform .4s ease-in-out;;
+    transition: opacity .3s ease-in-out, transform .4s ease-in-out;
     
 }
 
@@ -13,6 +13,7 @@
     background-color: var(--green-background);
     padding: 20px;
     border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
     transition: background-color .7s;
 }
 
