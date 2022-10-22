@@ -60,6 +60,8 @@ const AboutMe = () => {
                 <Progress progress={85} text="CSS" />
                 <Progress progress={65} text="JavaScript" />
                 <Progress progress={60} text="React" />
+                <Progress progress={40} text="PHP" />
+                <Progress progress={35} text="Python" />
             </div>
         </div>
     )
