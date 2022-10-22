@@ -8,6 +8,7 @@ import '../css/App.css'
 import Navbar from './Navbar';
 import HomePage from './HomePage';
 import AboutMe from './AboutMe'
+import ProjectList from './ProjectList';
 import Footer from './Footer'
 
 // Link rotues
@@ -64,6 +65,7 @@ const App = () => {
                 <Routes>
                     <Route exact path="/" element={<HomePage ref={ref} />}/>
                     <Route exact path="/about" element={<AboutMe  />}/>
+                    <Route exact path="/projects" element={<ProjectList  />}/>
                 </Routes>
                 <Footer urls={URLS} social={SOCIAL} scrollTo={scrollToContact} />
             </div>
