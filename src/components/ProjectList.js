@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 
 // Importing the style file
 import '../css/ProjectList.css'
@@ -85,8 +85,16 @@ const PROJECTS = [
 
 // Creating the ProjectList component
 const ProjectList = () => {
+
+    const top = useRef();
+
+    // Putting the user to the top of the page
+    useEffect(() => {
+        top.current?.scrollIntoView({ top: 0});
+    }, [])
+
     return (
-        <div className='project-list-container'>
+        <div className='project-list-container' ref={top}>
             {PROJECTS.map(project => {
                 return <Card project={project} key={project.name} />
             })}
