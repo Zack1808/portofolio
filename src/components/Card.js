@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 // Importing the style file
 import '../css/Card.css'
 
 // Creating the Card component
-const Card = ({ project }) => {
+const Card = ({ project, zoom, setZoom }) => {
 
     const [ref, inView] = useInView({
         threshold: 0.1
     });
 
     return (
-        <div className={`card-container ${inView && 'visible'}`} ref={ref}>
+        <div className={`card-container ${inView && 'visible'} ${zoom && "zoom"}`} ref={ref} onClick={() => setZoom(true)}>
             <div className="background">
                 <div className="card-header"></div>
                 <div className="image card-image" style={{backgroundImage: `url(${project.image})`}}></div>
@@ -22,8 +22,8 @@ const Card = ({ project }) => {
                         {project.desc}
                     </div>
                     <div className="card-button-list">
-                        <a href={project.pageLink} target="_blank" className="btn">Go to Page</a>
-                        <a href={project.githubLink} target="_blank" className="btn">Go to GitHub repo</a>
+                        <a href={project.pageLink} target="_blank" className="btn btn-submit">Go to Page</a>
+                        <a href={project.githubLink} target="_blank" className="btn btn-submit">Go to GitHub repo</a>
                     </div>
                 </div>
             </div>

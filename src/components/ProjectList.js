@@ -84,7 +84,7 @@ const PROJECTS = [
 ]
 
 // Creating the ProjectList component
-const ProjectList = () => {
+const ProjectList = ({ zoom, setZoom}) => {
 
     const top = useRef();
 
@@ -96,7 +96,7 @@ const ProjectList = () => {
     return (
         <div className='project-list-container' ref={top}>
             {PROJECTS.map(project => {
-                return <Card project={project} key={project.name} />
+                return <Card project={project} key={project.name} zoom={zoom} setZoom={setZoom} />
             })}
         </div>
     )

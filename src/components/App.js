@@ -51,6 +51,7 @@ const SOCIAL = [
 const App = () => {
 
     const [darkMode, setDarkMode] = useState(true);
+    const [clicked, setClicked] = useState(false)
     const ref = useRef()
 
     // function that will scroll to the contact from
@@ -60,12 +61,12 @@ const App = () => {
 
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <div className={`container ${darkMode && "dark"}`}>
-                <Navbar urls={URLS} switchToggle={darkMode} setSwitchToggle={setDarkMode} logo="PortoPage" scrollTo={scrollToContact}/>
+            <div className={`container ${darkMode && "dark"} ${clicked && "zoomed"}`}>
+                <Navbar urls={URLS} switchToggle={darkMode} setSwitchToggle={setDarkMode} logo="PortoPage" scrollTo={scrollToContact} setZoom={setClicked}/>
                 <Routes>
                     <Route exact path="/" element={<HomePage ref={ref} />}/>
                     <Route exact path="/about" element={<AboutMe  />}/>
-                    <Route exact path="/projects" element={<ProjectList  />}/>
+                    <Route exact path="/projects" element={<ProjectList zoom={clicked} setZoom={setClicked}  />}/>
                 </Routes>
                 <Footer urls={URLS} social={SOCIAL} scrollTo={scrollToContact} />
             </div>

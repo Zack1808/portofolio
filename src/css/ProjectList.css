@@ -3,8 +3,14 @@
     padding-top: 100px;
     display: grid;
     grid-gap: 1em;
+    position: relative;
     grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+}
+
+.zoomed {
+    overflow: hidden;
 }

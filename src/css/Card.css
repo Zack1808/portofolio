@@ -17,9 +17,10 @@
     align-items: center;
     width: 100%;
     border-radius: 20px;
-    color: #fff;
-    background-color: var(--green-background);
-    transition: background-color .7s;
+    color: #000;
+    background-color: transparent;
+    border: 2px solid var(--green-background);
+    transition: background-color .7s, color .7s, border .3s;
 }
 
 .card-container:hover {
@@ -61,5 +62,33 @@
 
 .dark .background{
     background-color: var(--dark-green-background);
-    transition: background-color .7s
+    color: #fff;
+    border: 0px solid var(--green-background);
+    transition: background-color .7s, color .7s, border .3s;
+}
+
+/* Zoom in effect */
+.zoom {
+    position: absolute;
+    height: calc(100vh - 75px);
+    top: 75px;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.zoom .background {
+    border: none;
+    height: 100%;
+    border-radius: 0;
+    background-color: var(--light-background)
+}
+
+.dark .zoom .background {
+    background-color: var(--dark-background)
+}
+
+.zoom:hover {
+    transform: scale(1);
 }
